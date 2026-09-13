@@ -1,13 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS Game</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 
-    <script src="./script.js"></script>
 </head>
 <body>
-    <h2><a href="../index.html">Back to Home Page</a></h2>
+
+    <div class="container">
+
+        <div class="topSection">
+
+            <div class="scoreSection"> <!---->
+                <div class="leftSection">
+                    <div class="description"><label>Dashboard</label><label class="rounds"></label></div>
+                    <div class="points">
+                        <label class="p1Score"></label>
+                        <br>
+                        <label class="p2Score"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="display"> <!---->
+                <div class="roundAvatars">
+                    <div class="p1Card"></div>
+                    <label>Vs.</label>
+                    <div class="p2Card"></div>
+                </div>
+                <div class="roundResult"><label></label></div>
+            </div>
+
+        </div>
+
+        <div class="bottomSection">
+            <div class="btnRock card" data-value="Rock"><h1>Rock</h1></div>
+            <div class="btnPaper card" data-value="Paper"><h1>Paper</h1></div>
+            <div class="btnScissors card" data-value="Scissors"><h1>Scissors</h1></div>
+        </div>
+
+    </div>
+
 </body>
 </html>
