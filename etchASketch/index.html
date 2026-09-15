@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
-    <title>etchASketch</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
+        <title>etchASketch</title>
+    </head>
+    <body>
+        <h1 style="color: lightcoral;">etchASketch</h1>
+
+        <span>Canvas' color:</span>
+        <input type="text" class="canvasColor" placeholder="def: white">
+        <button class="btn-clr btn-style">Apply Color</button>
+        
+        <br>
+
+        <span>Canvas' size:</span>
+        <input type="text" class="canvasSize" placeholder="def: 800px">
+        <button class="btn-size btn-style">Apply Size</button>
+        
+        <br>
+
+        <span>Amount of pixels:</span>
+        <input type="number" class="input" placeholder="def: 64 | max: 248">
+        <button class="render btn-style">Render</button>
+        <button class="btn-erase btn-style">Erase Canvas</button>
+        <button class="stop btn-style">Stop</button>
+
+        <br>
+        
+        <button class="def btn-style">Apply Default Settings</button>
+
+        <div class="cont"></div>
+
+        <div class="palette">
+            <div class="swatch" style="background:#000000"></div>
+            <div class="swatch" style="background:white"></div>
+            <div class="swatch" style="background:#ff0000"></div>
+            <div class="swatch" style="background:#00ff00"></div>
+            <div class="swatch" style="background:#0000ff"></div>
+            <div class="swatch" style="background:#ffff00"></div>
+            <div class="swatch" style="background:#ff8c00"></div>
+            <div class="swatch" style="background:#8b4513"></div>
+        </div>
+    </body>
 </html>
