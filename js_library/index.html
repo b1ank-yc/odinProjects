@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-open-page-variant</title><path d="M19 2L14 6.5V17.5L19 13V2M6.5 5C4.55 5 2.45 5.4 1 6.5V21.16C1 21.41 1.25 21.66 1.5 21.66C1.6 21.66 1.65 21.59 1.75 21.59C3.1 20.94 5.05 20.5 6.5 20.5C8.45 20.5 10.55 20.9 12 22C13.35 21.15 15.8 20.5 17.5 20.5C19.15 20.5 20.85 20.81 22.25 21.56C22.35 21.61 22.4 21.59 22.5 21.59C22.75 21.59 23 21.34 23 21.09V6.5C22.4 6.05 21.75 5.75 21 5.5V19C19.9 18.65 18.7 18.5 17.5 18.5C15.8 18.5 13.35 19.15 12 20V6.5C10.55 5.4 8.45 5 6.5 5Z" /></svg>
+                <span>Library</span>
+            </div>
+            <p>Build up a Library of Books You Read.</p>
+        </div>
+        <div class="main">
+            <div class="info">
+                <p class="heading-text-style">Bookshelf</p>
+                <div class="info-container">
+                    <div class="info-card one">
+                        <p>TOTAL BOOKS</p>
+                        <p class="num" id="total">1</p>
+                    </div>
+                    <div class="info-card two">
+                        <p>READ BOOKS</p>
+                        <p class="num" id="read">0</p>
+                    </div>
+                    <div class="info-card three">
+                        <p>UNREAD BOOKS</p>
+                        <p class="num" id="unread">1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="books">
+                <div class="books-heading">
+                    <p class="heading-text-style">All Books</p>
+                    <button id="add_book">Add a Book</button>
+                </div>
+                <div class="book-container">
+                    <!-- EXAMPLE BOOK -->
+                    <div class="example_book">
+                        <div class="book_photo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-open-page-variant</title><path d="M19 2L14 6.5V17.5L19 13V2M6.5 5C4.55 5 2.45 5.4 1 6.5V21.16C1 21.41 1.25 21.66 1.5 21.66C1.6 21.66 1.65 21.59 1.75 21.59C3.1 20.94 5.05 20.5 6.5 20.5C8.45 20.5 10.55 20.9 12 22C13.35 21.15 15.8 20.5 17.5 20.5C19.15 20.5 20.85 20.81 22.25 21.56C22.35 21.61 22.4 21.59 22.5 21.59C22.75 21.59 23 21.34 23 21.09V6.5C22.4 6.05 21.75 5.75 21 5.5V19C19.9 18.65 18.7 18.5 17.5 18.5C15.8 18.5 13.35 19.15 12 20V6.5C10.55 5.4 8.45 5 6.5 5Z" /></svg>
+                        </div>
+                        <div class="book_text">
+                            <h2>The Midnight Library</h2>
+                            <p>Matt Haig</p>
+                            <p class="pages">304 pages · Fantasy</p>
+                            <button>Unread</button>
+                            <span>Mark read</span>                            
+                        </div>
+                        <div class="dlt-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete-outline</title><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog closedby='any' id="popup">
+        <!-- this needs doing first of all -->
+    </dialog>
+</body>
+</html>
