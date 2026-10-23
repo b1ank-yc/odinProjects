@@ -43,25 +43,58 @@
                     <!-- EXAMPLE BOOK -->
                     <div class="example_book">
                         <div class="book_photo">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-open-page-variant</title><path d="M19 2L14 6.5V17.5L19 13V2M6.5 5C4.55 5 2.45 5.4 1 6.5V21.16C1 21.41 1.25 21.66 1.5 21.66C1.6 21.66 1.65 21.59 1.75 21.59C3.1 20.94 5.05 20.5 6.5 20.5C8.45 20.5 10.55 20.9 12 22C13.35 21.15 15.8 20.5 17.5 20.5C19.15 20.5 20.85 20.81 22.25 21.56C22.35 21.61 22.4 21.59 22.5 21.59C22.75 21.59 23 21.34 23 21.09V6.5C22.4 6.05 21.75 5.75 21 5.5V19C19.9 18.65 18.7 18.5 17.5 18.5C15.8 18.5 13.35 19.15 12 20V6.5C10.55 5.4 8.45 5 6.5 5Z" /></svg>
+                            <svg class="example_book-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-open-page-variant</title><path d="M19 2L14 6.5V17.5L19 13V2M6.5 5C4.55 5 2.45 5.4 1 6.5V21.16C1 21.41 1.25 21.66 1.5 21.66C1.6 21.66 1.65 21.59 1.75 21.59C3.1 20.94 5.05 20.5 6.5 20.5C8.45 20.5 10.55 20.9 12 22C13.35 21.15 15.8 20.5 17.5 20.5C19.15 20.5 20.85 20.81 22.25 21.56C22.35 21.61 22.4 21.59 22.5 21.59C22.75 21.59 23 21.34 23 21.09V6.5C22.4 6.05 21.75 5.75 21 5.5V19C19.9 18.65 18.7 18.5 17.5 18.5C15.8 18.5 13.35 19.15 12 20V6.5C10.55 5.4 8.45 5 6.5 5Z" /></svg>
                         </div>
                         <div class="book_text">
-                            <h2>The Midnight Library</h2>
-                            <p>Matt Haig</p>
-                            <p class="pages">304 pages · Fantasy</p>
-                            <button>Unread</button>
-                            <span>Mark read</span>                            
+                            <h2 class="book_text-h2">The Midnight Library</h2>
+                            <p class="book_text-p">Matt Haig</p>
+                            <p class="pages book_text-p">304 pages · Fantasy</p>
+                            <button class="book_text-button" id="status-button">Unread</button>
+                            <span class="book_text-span" id="status-text">Mark read</span>                            
                         </div>
                         <div class="dlt-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete-outline</title><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
+                            <svg class="dlt-btn-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete-outline</title><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
                         </div>
                     </div>
             </div>
         </div>
     </div>
-
     <dialog closedby='any' id="popup">
-        <!-- this needs doing first of all -->
+        <div class="dialog-header">
+            <h2>Add a Book</h2>
+            <p>Fill in the details to add a new book to the library.</p>
+        </div>
+        <div class="title_div">
+            <label for="title" class="dialog-font">Title <span class="req">*</span></label>
+            <input required type="text" id='title' placeholder="e.g The Midnight Library">
+        </div>
+        <div class="input_section_cont">
+            <div class="div-d">
+                <label for="author" class="dialog-font">Author <span class="req">*</span></label>
+                <input required type="text" id="author" placeholder="e.g Matt Haig">
+                <label for="pages" class="dialog-font">Number of Pages <span class="req">*</span></label>
+                <input required type="number" id="pages" placeholder="e.g 304">
+            </div>
+            <div class="div-d">
+                <label for="genre" class="dialog-font">Genre <span class="req">*</span></label>
+                <input required type="text" id="genre" placeholder="e.g Fantasy">
+                <label for="radio" class="dialog-font">Have you Read This Book? <span class="req">*</span></label>
+                <div class="radios_cont">
+                    <div class="rdio r1">
+                        <input required value='Yes' type="radio" class="dialog-font" id="rdio1" name="radio">
+                        <label for="rdio1">Yes</label>
+                    </div>
+                    <div class="rdio r2">
+                        <input required value='No' type="radio" class="dialog-font" id="rdio2" name="radio">
+                        <label for="rdio2">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_div">
+            <button id="exit_window">Cancel</button>
+            <button id="confirm_window">Add Book</button>
+        </div>
     </dialog>
 </body>
 </html>
