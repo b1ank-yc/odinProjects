@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ticTacToe</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ticTacToe</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- START MENU -->
+        <section>
+            <div id="wrapper" class="container_style display_setter">
+                <div>
+                    <h2 class="heading_text">Tic Tac Toe</h2>
+                    <p class="info_text top_margin">You can play a tic tac toe game here.</p>
+                    <p class="info_text">Supported game modes as of now include:</p>
+                    <ul class="info_text top_margin">
+                        <li>Player vs Player</li>
+                        <li>Player vs AI (Not available)</li>
+                    </ul>
+                    <br>
+                    <p class="info_text">After you click the button below each player will be asked to enter their name.</p>
+                    <p class="info_text">The game will begin after both players have declared their names.</p>
+                </div>
+                <div class="top_margin">
+                    <button id="begin_button" class="button_style">Begin the Game</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="board_wrapper"></div>
+        </section>
+
+        <!-- INPUT POPUP -->
+        <section>
+            <dialog class="container_style" id="name_input_popup">
+                <form action="post" id="form_display">
+                    <div>
+                        <h2 class="heading_text">Enter:</h2>
+                        <p class="info_text">Fields marked with "*" are required.</p>
+                    </div>
+                    <div>
+                        <label class="label_text" for="p1_name"><span class="red_color">* </span>CIRCLE'S PLAYER NAME:</label>
+                        <div class="inline_flex">
+                            <input class="input_style" type="text" id="p1_name" required minlength="2">
+                            <div class="avatar">O</div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label_text" for="p2_name"><span class="red_color">* </span>CROSS'S PLAYER NAME:</label>
+                        <div class="inline_flex">
+                            <input class="input_style" type="text" id="p2_name" required minlength="2">
+                            <div class="avatar">X</div>
+                        </div>
+                    </div>
+                    <div class="top_margin">
+                        <button type="button" id="close_btn" class="button_style">Close</button>
+                        <button id="confirm_btn" class="button_style">Confirm</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+
+    </body>
+
 </html>

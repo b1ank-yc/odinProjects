@@ -1,5 +1,210 @@
 @import url(../reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');   
 
-* {
-    background-color: black;
+:root {
+    --primary-bg-color: #14161B;
+    --secondary-bg-color: #1C1F26;
+    --border-color: #2D3139;
+    --svg-color: #9198A1;
+    --text-bright: #EBEDF0;
+    --text-dark: #919895;
+    --blue-accent: #38BDF8;
+    --blue-shade: #122936;
+    --input-color: #181B20;
+
+    --pink: #C030A9;
+    --soft-pink: #F8E6F3;
+    --yellow: #F7D200;
+    --soft-yellow: #FFF6CC;
+
+    --display-value: block;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container_style {
+    border-radius: 12px;
+    background-color: var(--secondary-bg-color);
+    padding: 25px 50px;
+    border: 2px solid var(--border-color);
+}
+
+.display_setter {
+    display: var(--display-value);
+}
+
+.label_text {
+    color: var(--text-dark);
+    font-weight: bold;
+    font-size: 0.6rem;
+    display: block;
+}
+
+.input_style {
+    background-color: var(--input-color);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-bright);
+    padding: 4px 8px;
+    outline: none;
+}
+
+.input_style:focus {
+    outline: none;
+    border: 2px solid var(--blue-accent);
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    font-size: 1.5rem;
+    background-color: var(--input-color);
+    border: 2px solid var(--border-color);
+    color: var(--text-bright);
+}
+
+.inline_flex {
+    display: inline-flex;
+    gap: 8px;
+}
+
+.red_color {
+    color: red;
+    font-size: 0.7rem;
+}
+
+#form_display {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cell_style {
+    height: 200px;
+    width: 200px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    color: var(--text-bright);
+    outline: none;
+}
+
+.cell_style:hover {
+    outline: none;
+    border: 2px solid var(--blue-accent);
+}
+
+.cell_style:active {
+    outline: none;
+    border: 2px solid var(--border-color);
+}
+
+.underline0 {
+    margin-bottom: 0.5rem;
+}
+
+.underline1 {
+    margin-bottom: 26px;
+}
+
+.wndw_score0 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.wndw_score1 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.wndw_text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 35px;
+    color: var(--svg-color);
+}
+
+#board_wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 5vw;
+}
+
+.board_grid {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.window_container {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-bright);
+    padding: 25px 25px;
+    margin-top: 1vh;
+    height: max-content;
+}
+
+.inline_flex_wndw {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.heading_text {
+    color: var(--text-bright);
+    font-size: 2rem;
+}
+
+.info_text {
+    color: var(--text-dark);
+}
+
+.top_margin {
+    margin-top: 0.8rem;
+}
+
+.button_style {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--blue-shade);
+    padding: 8px 16px;
+    color: var(--text-bright);
+    font-weight: bold;
+    font-size: .96rem;
+}
+
+.button_style:hover {
+    border: 2px solid var(--blue-accent);
+    cursor: pointer;
+}
+
+.button_style:active {
+    border: 2px solid var(--border-color);
 }
